@@ -8,6 +8,10 @@ We define Actor Local and Actor Target in the same way
 Critic : State Space + Action Space | 200 | 150 | 1 with RELU | RELU | Linear activations respectively.
 We define Critic Local and Critic Target in the same way
 
+## Algorithm Used
+Multi Agent DDPG, which means we have two DDPG agents playing against each other because of the reward system. We store the experiences in the same replay buffer.
+
+
 ## Hyperparameters
 
 BUFFER_SIZE = int(1e5)  # replay buffer size
@@ -34,3 +38,5 @@ EXPLORATION_TIME_STEPS = 5000 # Time steps until which the agent will just explo
 ![](Result_With_Exploration.png)
 
 ## Future Work
+
+I would like to explore other state of the art algorithms like Multi Agent PPO, Mean Field Multi Agent Reinforcement Learning and implement this Multi Agent DDPG by Multi agent Twin Delayed DDPG.
